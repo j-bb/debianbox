@@ -37,7 +37,7 @@ fi
 
 #debug "$0 server_name = $server_name"
 
-## Check file that store email and otgher config like partition, ...
+## Check file that store email and other config like partition, ...
 if [ -e ../common/$server_name-local.sh ] ; then
 . ../common/$server_name-local.sh
 fi
@@ -233,16 +233,17 @@ scriptsPath="../common"
 #debug "scriptsPath = $scriptsPath"
 #debug "Loading ./$scriptsPath/$server_name.sh"
 
-if [ -e ./$scriptsPath/$server_name.sh ] ; then
-    . ./$scriptsPath/$server_name.sh
-else
-    if [ "$1" == tests -o "$1" == "client-side" ] ; then
-        debug "File $(product_name)/common/$server_name.sh doesn't exist, but don't worry, it's ok"
-    else
-        error "File $(product_name)/common/$server_name.sh doesn't exist"
-        exit -1
-    fi
-fi
+##DebianBox : not sure it is still usefull:
+##if [ -e ./$scriptsPath/$server_name.sh ] ; then
+##    . ./$scriptsPath/$server_name.sh
+##else
+##    if [ "$1" == tests -o "$1" == "client-side" ] ; then
+##        debug "File $(product_name)/common/$server_name.sh doesn't exist, but don't worry, it's ok"
+##    else
+##        error "File $(product_name)/common/$server_name.sh doesn't exist"
+##        exit -1
+##    fi
+##fi
 
 #ensure $server_user is defined
 server_user=$USER
