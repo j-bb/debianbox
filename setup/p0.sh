@@ -29,7 +29,7 @@
 
 begin_block "p0"
 
-    . ./p1-sys/run-as-root.sh 2>&1 | tee -a $log
+    . ./p0-foundation/run-as-root.sh 2>&1 | tee -a $log
 
     echo -e "$ROUGE""--------------------------------------------"
     echo "Go the dedibox console and add basic supervision" | tee -a $log

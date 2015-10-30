@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ../common/fwk.sh "p1" "../setup/log" "setup-p1.log"
+. ../common/fwk.sh "p0" "../setup/log" "setup-p1.log"
 
 ################
 ## add sudo which is not installed by default on Debian

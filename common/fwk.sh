@@ -237,9 +237,9 @@ if [ -e ./$scriptsPath/$server_name.sh ] ; then
     . ./$scriptsPath/$server_name.sh
 else
     if [ "$1" == tests -o "$1" == "client-side" ] ; then
-        debug "File $(product_mane)/common/$server_name.sh doesn't exist, but don't worry, it's ok"
+        debug "File $(product_name)/common/$server_name.sh doesn't exist, but don't worry, it's ok"
     else
-        error "File $(product_mane)/common/$server_name.sh doesn't exist"
+        error "File $(product_name)/common/$server_name.sh doesn't exist"
         exit -1
     fi
 fi
